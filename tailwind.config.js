@@ -8,6 +8,10 @@ module.exports = {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
       }
     },
+    backgroundSize:
+    {
+      '50%':'50%'
+    }
   },
   keyframes:{
     'infinite-scroll': {

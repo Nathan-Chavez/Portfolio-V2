@@ -13,10 +13,8 @@ const imageUrls = [  REACT, JS, HTML, CSS, TAILWIND, AWS,];
 const iconNames = ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'AWS'];
 
 const Skills = () => {
-    //const [theme, setTheme] = useState("dark");    
-
   return (
-    <div className="w-full h-[25vh] bg-white dark:bg-[#1a1a1a] overflow-x-hidden">
+    <div className="w-full h-[25vh] bg-[#DEE4E7] dark:bg-[#1a1a1a] overflow-x-hidden">
       <div className="relative overflow-x-hidden max-w-[1500px] mx-auto px-8 flex flex-col justify-center items-start h-full">
 
             <Marquee speed={30} className='overflow-x-hidden'>
