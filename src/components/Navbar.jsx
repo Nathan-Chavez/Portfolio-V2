@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className='fixed w-full z-50 h-[50px] flex justify-between items-center px-4 bg-gradient-to-r from-[#0792e3] to-[#9952e0] dark:bg-gradient-to-r dark:from-[#2101ad] dark:to-[#b50dff] text-gray-400'>
+    <div className='fixed w-screen z-50 h-[50px] flex justify-between items-center px-4 bg-gradient-to-r from-[#0792e3] to-[#9952e0] dark:bg-gradient-to-r dark:from-[#2101ad] dark:to-[#b50dff] text-gray-400'>
       <div>
         <img src={Logo} alt='Logo' style={{ width: '70px' }}/>
       </div>
@@ -37,14 +37,15 @@ const Navbar = () => {
       <div className='hidden md:flex'>
         <ul className='flex space-x-4 divide-x-2'>
           {/* Smooth scrolling links */}
-          <li className='hover:text-white'>
+          <li>
             <Link
               to='home'
               smooth={true}
-              duration={550}
+              duration={1000}
               activeClass='text-white'
               spy={true}
               onSetActive={() => setActiveSection('home')}
+              className='hover:text-white'
             >
               Home
             </Link>
@@ -53,7 +54,7 @@ const Navbar = () => {
             <Link
               to='about'
               smooth={true}
-              duration={550}
+              duration={1000}
               activeClass='text-white'
               spy={true}
               onSetActive={() => setActiveSection('about')}
@@ -65,7 +66,7 @@ const Navbar = () => {
             <Link
               to='projects'
               smooth={true}
-              duration={550}
+              duration={1000}
               activeClass='text-white'
               spy={true}
               onSetActive={() => setActiveSection('projects')}
@@ -77,7 +78,7 @@ const Navbar = () => {
             <Link
               to='contact'
               smooth={true}
-              duration={550}
+              duration={1000}
               activeClass='text-white'
               spy={true}
               onSetActive={() => setActiveSection('contact')}
@@ -98,7 +99,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className='md:hidden absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center'>
+        <div className='md:hidden absolute top-0 left-0 w-screen h-screen flex flex-col justify-center items-center overflow-hidden'>
           <ul className='absolute top-0 left-0 w-full h-screen bg-[#DEE4E7] dark:bg-[#1a1a1a] dark:text-white text-[#1a1a1a] flex flex-col justify-center items-left'>
             {/* Smooth scrolling links for mobile menu */}
             <li className={`py-6 text-4xl ${activeSection === 'home'} border-b border-t dark:border-white border-black`}>
